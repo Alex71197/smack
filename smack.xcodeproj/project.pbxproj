@@ -19,6 +19,7 @@
 		FA2F2D571F579B02003C4C31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F2D561F579B02003C4C31 /* Constants.swift */; };
 		FA2F2D591F579FDF003C4C31 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F2D581F579FDF003C4C31 /* LoginVC.swift */; };
 		FA2F2D5B1F57A20A003C4C31 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F2D5A1F57A20A003C4C31 /* CreateAccountVC.swift */; };
+		FA530EDA1F5B5EAE00036BB7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA530ED91F5B5EAE00036BB7 /* RoundedButton.swift */; };
 		FAF14F411F59E593002F4F48 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF14F401F59E593002F4F48 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		FA2F2D561F579B02003C4C31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA2F2D581F579FDF003C4C31 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FA2F2D5A1F57A20A003C4C31 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		FA530ED91F5B5EAE00036BB7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FAF14F401F59E593002F4F48 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2F2D531F578F09003C4C31 /* GradientView.swift */,
+				FA530ED91F5B5EAE00036BB7 /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA087F7E1F5612EA00F5DEB0 /* ChannelVC.swift in Sources */,
+				FA530EDA1F5B5EAE00036BB7 /* RoundedButton.swift in Sources */,
 				FA087F7C1F5612DE00F5DEB0 /* ChatVC.swift in Sources */,
 				FA2F2D5B1F57A20A003C4C31 /* CreateAccountVC.swift in Sources */,
 				FAF14F411F59E593002F4F48 /* AuthService.swift in Sources */,
