@@ -23,6 +23,7 @@
 		FA530EDC1F5B6F9300036BB7 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA530EDB1F5B6F9300036BB7 /* UserDataService.swift */; };
 		FA530EDE1F5C67A000036BB7 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA530EDD1F5C67A000036BB7 /* AvatarPickerVC.swift */; };
 		FA530EE01F5C695500036BB7 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA530EDF1F5C695500036BB7 /* AvatarCell.swift */; };
+		FA98EAC81F5F61A8003D3692 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98EAC71F5F61A8003D3692 /* CircleImage.swift */; };
 		FAF14F411F59E593002F4F48 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF14F401F59E593002F4F48 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		FA530EDB1F5B6F9300036BB7 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		FA530EDD1F5C67A000036BB7 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		FA530EDF1F5C695500036BB7 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		FA98EAC71F5F61A8003D3692 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		FAF14F401F59E593002F4F48 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				FA2F2D531F578F09003C4C31 /* GradientView.swift */,
 				FA530ED91F5B5EAE00036BB7 /* RoundedButton.swift */,
 				FA530EDF1F5C695500036BB7 /* AvatarCell.swift */,
+				FA98EAC71F5F61A8003D3692 /* CircleImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				FA087F7E1F5612EA00F5DEB0 /* ChannelVC.swift in Sources */,
 				FA530EDE1F5C67A000036BB7 /* AvatarPickerVC.swift in Sources */,
 				FA530EDA1F5B5EAE00036BB7 /* RoundedButton.swift in Sources */,
+				FA98EAC81F5F61A8003D3692 /* CircleImage.swift in Sources */,
 				FA087F7C1F5612DE00F5DEB0 /* ChatVC.swift in Sources */,
 				FA530EDC1F5B6F9300036BB7 /* UserDataService.swift in Sources */,
 				FA2F2D5B1F57A20A003C4C31 /* CreateAccountVC.swift in Sources */,
