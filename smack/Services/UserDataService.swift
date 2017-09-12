@@ -30,4 +30,42 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
+    func returnUIColor(components: String) -> UIColor {
+        
+        // scanner acts almost as a for loop (scans each character)
+        let scanner = Scanner(string: components)
+        // If we want certain characters within the string (we know we want the CGFloats inside the array (inside the string) so we tell the scanner to skip the chars: [ ] , and " "
+        let skipped = CharacterSet(charactersIn: "[], ")
+        // comma acts a the endpoint could be (let = endPoint)
+        let comma = CharacterSet(charactersIn: ",")
+        scanner.charactersToBeSkipped = skipped
+        
+        var r, g, b, a: NSString?
+        
+        // Activity lines for scanners from start to comma and storing in the respective variables
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        // Set default UIColor
+        let defaultColor = UIColor.lightGray
+        
+        // creating the color variable and protecting them from unrwrapping nil values
+        guard let rUnwrapped = r else { return defaultColor }
+        guard let gUnwrapped = g else { return defaultColor }
+        guard let bUnwrapped = b else { return defaultColor }
+        guard let aUnwrapped = a else { return defaultColor }
+        
+        // converting the string to a double value than into a CGFloat (which UIColors need)
+        let rFloat = CGFloat(rUnwrapped.doubleValue)
+        let gFloat = CGFloat(gUnwrapped.doubleValue)
+        let bFloat = CGFloat(bUnwrapped.doubleValue)
+        let aFloat = CGFloat(aUnwrapped.doubleValue)
+        
+        let newUIColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        
+        return newUIColor
+    }
+    
 }
