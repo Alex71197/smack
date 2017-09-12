@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,7 +138,7 @@
                                     <action selector="loginBtnPressed:" destination="4Vd-YP-9bc" eventType="touchUpInside" id="LYe-No-3VK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hax-hh-bOb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hax-hh-bOb" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="2rG-4o-kFu"/>
@@ -444,7 +444,7 @@
                                     <segue destination="epp-3z-tye" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="szL-Ar-yea"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-Ws-wPC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-Ws-wPC" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="319.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ENx-tf-3Nf"/>
@@ -479,10 +479,16 @@
                                     <action selector="pickBGColorPressed:" destination="c2P-Qr-oKS" eventType="touchUpInside" id="9Xm-HG-zDB"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nPa-6U-h61">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nPa-6U-h61" firstAttribute="centerY" secondItem="fUp-V3-a53" secondAttribute="centerY" constant="-100" id="G9s-Hi-ZCZ"/>
                             <constraint firstItem="DUy-V8-bl9" firstAttribute="centerX" secondItem="fUp-V3-a53" secondAttribute="centerX" id="JuK-7g-u2r"/>
+                            <constraint firstItem="nPa-6U-h61" firstAttribute="centerX" secondItem="fUp-V3-a53" secondAttribute="centerX" id="NVS-fC-gnj"/>
                             <constraint firstItem="ZNU-Ws-wPC" firstAttribute="centerX" secondItem="fUp-V3-a53" secondAttribute="centerX" id="Sfa-PB-bRU"/>
                             <constraint firstItem="gw1-83-Qsz" firstAttribute="trailing" secondItem="fUp-V3-a53" secondAttribute="trailingMargin" id="TPW-Fa-uhw"/>
                             <constraint firstItem="iLf-eH-XCH" firstAttribute="top" secondItem="DUy-V8-bl9" secondAttribute="bottom" constant="40" id="Tsi-k6-aFT"/>
@@ -502,6 +508,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="fom-kp-aqo" id="51f-lm-VHe"/>
                         <outlet property="passwordTxt" destination="4TL-sD-3L6" id="lO6-kb-olx"/>
+                        <outlet property="spinner" destination="nPa-6U-h61" id="RtC-3U-exp"/>
                         <outlet property="userImg" destination="ZNU-Ws-wPC" id="mZy-RT-vXd"/>
                         <outlet property="usernameTxt" destination="EzI-hZ-b6l" id="2B3-dU-jtT"/>
                         <segue destination="Wqd-eG-JB7" kind="show" identifier="toAvatarPicker" id="agl-cJ-tht"/>
