@@ -11,7 +11,7 @@ import Foundation
 struct Channel: Decodable {
     
     public private(set) var id: String!
-    public private(set) var channelName: String!
+    public private(set) var channelTitle: String!
     public private(set) var channelDescription: String!
     
 }

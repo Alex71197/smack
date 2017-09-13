@@ -149,7 +149,7 @@
                                 <rect key="frame" x="0.0" y="131.5" width="375" height="420.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fk7-4E-p1j">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="fk7-4E-p1j" customClass="ChannelCell" customModule="smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fk7-4E-p1j" id="Agh-vH-Sty">
@@ -169,6 +169,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="AdB-Ji-BNx" id="EsM-u7-TgL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -202,6 +205,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="Gy0-gc-ZBO" id="ats-Jc-87d"/>
+                        <outlet property="tableView" destination="cCY-zr-dGF" id="mxy-hg-W2z"/>
                         <outlet property="userImg" destination="hax-hh-bOb" id="Peh-JI-0LL"/>
                         <segue destination="xd7-3q-RAH" kind="show" identifier="toLogin" id="9KT-Va-DXl"/>
                     </connections>

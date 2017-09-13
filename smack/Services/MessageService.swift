@@ -26,7 +26,7 @@ class MessageService {
                         let name = item["name"].stringValue
                         let description = item["description"].stringValue
                         let id = item["_id"].stringValue
-                        let channel = Channel(id: id, channelName: name, channelDescription: description)
+                        let channel = Channel(id: id, channelTitle: name, channelDescription: description)
                         self.channels.append(channel)
                     }
                     print(self.channels)
