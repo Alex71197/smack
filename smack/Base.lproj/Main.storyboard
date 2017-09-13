@@ -319,6 +319,10 @@
                                     <action selector="createAccountBtnPressed:" destination="xd7-3q-RAH" eventType="touchUpInside" id="Bgh-IO-Hf4"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wLB-MN-oSe">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -329,12 +333,17 @@
                             <constraint firstItem="er3-W9-TDV" firstAttribute="centerX" secondItem="FeC-Vq-4Az" secondAttribute="centerX" id="Enl-EV-0mY"/>
                             <constraint firstItem="67p-R7-yFw" firstAttribute="centerX" secondItem="FeC-Vq-4Az" secondAttribute="centerX" id="JW5-Je-3WG"/>
                             <constraint firstItem="ysl-7p-S0m" firstAttribute="top" secondItem="PEL-cR-mW7" secondAttribute="bottom" constant="40" id="LD1-EU-OPo"/>
+                            <constraint firstItem="wLB-MN-oSe" firstAttribute="centerX" secondItem="FeC-Vq-4Az" secondAttribute="centerX" id="PbK-Lb-eB2"/>
                             <constraint firstItem="er3-W9-TDV" firstAttribute="top" secondItem="T4R-jv-Oal" secondAttribute="bottom" constant="60" id="Qes-ev-Far"/>
+                            <constraint firstItem="wLB-MN-oSe" firstAttribute="centerY" secondItem="FeC-Vq-4Az" secondAttribute="centerY" constant="-100" id="YR8-VO-mXA"/>
                             <constraint firstItem="PEL-cR-mW7" firstAttribute="centerX" secondItem="FeC-Vq-4Az" secondAttribute="centerX" id="sSS-MV-bbI"/>
                             <constraint firstItem="PEL-cR-mW7" firstAttribute="top" secondItem="er3-W9-TDV" secondAttribute="bottom" constant="40" id="zdj-Bo-cYe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="7aJ-Ij-IfY" id="MIR-Bs-a0r"/>
+                        <outlet property="spinner" destination="wLB-MN-oSe" id="WFL-Um-Xtf"/>
+                        <outlet property="usernameTxt" destination="f5d-1G-UDA" id="wBK-E8-Mkp"/>
                         <segue destination="c2P-Qr-oKS" kind="show" identifier="toCreateAccount" id="ALI-Cl-LwX"/>
                     </connections>
                 </viewController>
