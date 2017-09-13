@@ -18,12 +18,24 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        // Logic to implement and place the SWRevealController
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width  - 60
+        
+        // Creating an observer to listen if the user data has changed
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        // TableView setup
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.rowHeight = 44
         
+        // SocketIO call to update the table view
+        SocketService.instance.getChannel { (success) in
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +62,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func userDataDidChange(_ notif: Notification) {
         setUpUserInfo()
+        self.tableView.reloadData()
     }
     
     func setUpUserInfo() {
