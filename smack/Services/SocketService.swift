@@ -56,7 +56,7 @@ class SocketService: NSObject {
         completion(true)
     }
     
-    func getChatMessage(completion: @escaping CompletionHandler) {
+    func getChatMessage(completion: @escaping (_ newMessage: Message) -> Void) {
         // Listens for an event from the server called messageCreated
         // Once we hear the event, we store the data into an array and proceed to parse the data into variables
         socket.on("messageCreated") { (dataArray, ack) in
@@ -68,13 +68,11 @@ class SocketService: NSObject {
             guard let id = dataArray[6] as? String else { return }
             guard let timeStamp = dataArray[7] as? String else { return }
             // Once we have the variables from the dataArray we can create the newMessage and append to our message array
-            if channelId == MessageService.instance.selectedChannel?.id {
-                let newMessage = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
-                MessageService.instance.messages.append(newMessage)
-                completion(true)
-            } else {
-                completion(false)
-            }
+            
+            let newMessage = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
+            
+            completion(newMessage)
+            
         }
     }
     
